@@ -154,7 +154,7 @@
     },
     {
         "back_flavor": "\"...as I glimpsed it I could not help thinking of all the hideous legends I had heard in the last twenty-four hours - legends which portrayed this ragged rock as a veritable gateway to realms of unfathomed horror and inconceivable abnormality.\" - H. P. Lovecraft, <u>The Shadow over Innsmouth</u>",
-        "back_illustrator": "Jorge Ramos Márquez",
+        "back_illustrator": "Jorge Ramos MArquez",
         "back_name": "Devil Reef",
         "clues": 0,
         "code": "07169",
@@ -174,7 +174,7 @@
     },
     {
         "back_flavor": "\"...as I glimpsed it I could not help thinking of all the hideous legends I had heard in the last twenty-four hours - legends which portrayed this ragged rock as a veritable gateway to realms of unfathomed horror and inconceivable abnormality.\" - H. P. Lovecraft, <u>The Shadow over Innsmouth</u>",
-        "back_illustrator": "Jorge Ramos Márquez",
+        "back_illustrator": "Jorge Ramos MArquez",
         "back_name": "Devil Reef",
         "clues": 0,
         "code": "07170",
@@ -194,7 +194,7 @@
     },
     {
         "back_flavor": "\"...as I glimpsed it I could not help thinking of all the hideous legends I had heard in the last twenty-four hours - legends which portrayed this ragged rock as a veritable gateway to realms of unfathomed horror and inconceivable abnormality.\"\n- H. P. Lovecraft, <u>The Shadow over Innsmouth</u>",
-        "back_illustrator": "Jorge Ramos Márquez",
+        "back_illustrator": "Jorge Ramos MArquez",
         "back_name": "Devil Reef",
         "clues": 0,
         "code": "07171",
@@ -214,7 +214,7 @@
     },
     {
         "back_flavor": "\"...as I glimpsed it I could not help thinking of all the hideous legends I had heard in the last twenty-four hours - legends which portrayed this ragged rock as a veritable gateway to realms of unfathomed horror and inconceivable abnormality.\"\n- H. P. Lovecraft, <u>The Shadow over Innsmouth</u>",
-        "back_illustrator": "Jorge Ramos Márquez",
+        "back_illustrator": "Jorge Ramos MArquez",
         "back_name": "Devil Reef",
         "clues": 0,
         "code": "07172",
@@ -234,7 +234,7 @@
     },
     {
         "back_flavor": "\"...as I glimpsed it I could not help thinking of all the hideous legends I had heard in the last twenty-four hours - legends which portrayed this ragged rock as a veritable gateway to realms of unfathomed horror and inconceivable abnormality.\"\n- H. P. Lovecraft, <u>The Shadow over Innsmouth</u>",
-        "back_illustrator": "Jorge Ramos Márquez",
+        "back_illustrator": "Jorge Ramos MArquez",
         "back_name": "Devil Reef",
         "clues": 0,
         "code": "07173",
@@ -262,7 +262,7 @@
         "encounter_code": "devil_reef",
         "encounter_position": 12,
         "faction_code": "mythos",
-        "illustrator": "Álvaro Calvo Escudero",
+        "illustrator": "Alvaro Calvo Escudero",
         "name": "Bootlegger's Hideaway",
         "pack_code": "def",
         "position": 174,
@@ -283,7 +283,7 @@
         "encounter_code": "devil_reef",
         "encounter_position": 13,
         "faction_code": "mythos",
-        "illustrator": "Álvaro Calvo Escudero",
+        "illustrator": "Alvaro Calvo Escudero",
         "name": "Bootlegger's Hideaway",
         "pack_code": "def",
         "position": 174,
