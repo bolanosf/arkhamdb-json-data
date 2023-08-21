@@ -1,10 +1,7 @@
 import argparse
 import json
-import jsonschema
 import os
-import sys
-import re
-from utils import check_dir_access, verbose_print, format_json, check_file_access
+from utils import check_dir_access, verbose_print, format_json, check_file_access, merge_JsonFiles
 
 
 PACK_DIR="pack"
@@ -70,54 +67,7 @@ def parse_commandline():
 
     return args
 
-#### LOAD METADATA ####
-def load_cycles(args):
-    verbose_print(args, "Loading cycle index file...\n", 1)
-    cycles_path = os.path.join(args.base_path, "cycles.json")
-    cycles_data = load_json_file(args, cycles_path)
-
-    return cycles_data
-
-def load_packs(args, cycles_data):
-    verbose_print(args, "Loading pack index file...\n", 1)
-    packs_path = os.path.join(args.base_path, "packs.json")
-    packs_data = load_json_file(args, packs_path)
-
-    for p in packs_data:
-        if p["cycle_code"] == "promotional":
-            p["cycle_code"] = "promo"
-        pack_filename = "{}.json".format(p["code"])
-        pack_path = os.path.join(args.pack_path, p["cycle_code"], pack_filename)
-        p['player'] = check_file_access(pack_path)
-        pack_filename = "{}_encounter.json".format(p["code"])
-        pack_path = os.path.join(args.pack_path, p["cycle_code"], pack_filename)
-        p['encounter'] = check_file_access(pack_path)
-
-    return packs_data
-
-def load_factions(args):
-    verbose_print(args, "Loading faction index file...\n", 1)
-    factions_path = os.path.join(args.base_path, "factions.json")
-    factions_data = load_json_file(args, factions_path)
-
-    return factions_data
-
-def load_types(args):
-    verbose_print(args, "Loading type index file...\n", 1)
-    types_path = os.path.join(args.base_path, "types.json")
-    types_data = load_json_file(args, types_path)
-
-    return types_data
-
-def load_sides(args):
-    verbose_print(args, "Loading side index file...\n", 1)
-    sides_path = os.path.join(args.base_path, "sides.json")
-    sides_data = load_json_file(args, sides_path)
-
-    return sides_data
-
-
-# Parse Subset Paths
+#### PARSE SUBSET PATHS ####
 def parse_subset_filepaths(args):
     verbose_print(args, "Loading pack index file...\n", 1)
     packs_path = os.path.join(args.base_path, "packs.json")
@@ -154,16 +104,6 @@ def parse_subset_filepaths(args):
         player_json_paths.append(pack_path)
 
     return player_json_paths, encounter_json_paths
-
-def merge_JsonFiles(path_list, filename):
-    result = list()
-    for f1 in path_list:
-        print(f1)
-        with open(f1, 'r') as infile:
-            result.extend(json.load(infile))
-
-    with open(filename, 'w') as output_file:
-        json.dump(result, output_file)
 
 def main():
     args = parse_commandline()

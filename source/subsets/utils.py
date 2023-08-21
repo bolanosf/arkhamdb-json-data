@@ -34,3 +34,13 @@ def format_json(json_data):
          formatted_data = re.sub("^" + ("    " * i), "\t" * i, formatted_data, flags=re.MULTILINE)
     formatted_data += "\n"
     return formatted_data
+
+def merge_JsonFiles(path_list, filename):
+    result = list()
+    for f1 in path_list:
+        print(f1)
+        with open(f1, 'r') as infile:
+            result.extend(json.load(infile))
+
+    with open(filename, 'w') as output_file:
+        json.dump(result, output_file)
